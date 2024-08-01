@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+   <style>
+    
+    *{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:Bebas Neue;
+    color:white;
+    scroll-behavior: smooth;
+  }
+  .bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+ html{
+   scroll-behavior: smooth;
+   font-size:62.5%;
+ }
+ body{
+    margin:0;
+    padding: 0;
+    background-color:#000B18;
+    scroll-behavior: smooth;
+ }
+ header{
+    height:8.6rem;
+    width: 168.8rem;
+    background-color:#000B18;
+    position:fixed;
+    z-index: 9999;
+ }
+ nav{
+    display:flex;
+    justify-content:space-between;
+    padding-top:2.4rem;
+    text-decoration:none;
+    
+ }
+ nav h1{
+    padding-left:6.0rem;
+font-family: 'Bebas Neue';
+font-style: normal;
+font-weight: 400;
+font-size: 3.2rem;
+line-height: 150%;
+letter-spacing: -0.01em;
+color: #C7C7C7;
+flex: none;
+order: 0;
+flex-grow: 0;
+
+ }
+ nav ul{
+display:flex;
+text-decoration:none;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding-top: 1.4rem;
+padding-left: 70%;
+gap: 3.2rem;
+padding-right:6.0rem;
+margin: 0 auto;
+width: 20.7rem;
+height: 2.4rem;
+flex: none;
+order: 1;
+flex-grow: 0;
+
+ }
+ nav ul li{
+    text-decoration:none;
+    list-style:none;
+ }
+ nav ul li a{
+width: 3.9rem;
+height: 2.4rem;
+text-decoration:none;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 1.6rem;
+line-height: 2.4rem;
+position: relative;
+transition:all 0.4s;
+letter-spacing: -0.03em;
+color: #C7C7C7;
+flex: none;
+order: 0;
+flex-grow: 0;
+
+ }
+ .nav_link:hover,
+ .nav_lik:focus{
+   color:#fff;
+ }
+ .nav_link::after{
+   content:'';
+   height: .2rem;
+   width: 100%;
+   background: #D3E97A;
+   display: block;
+   position: absolute;
+   left:0;
+   bottom: -.8rem;
+   opacity:0;
+   transition: all 0.2s;
+   pointer-events: none;
+ }
+
+ .nav_link:hover::after,
+ .nav_link:focus::after{
+   opacity: 1;
+ }
+ .background{
+position: absolute;
+width: 144.0rem;
+height: 78.0rem;
+left: 0rem;
+top: 9.2rem;
+mix-blend-mode: soft-light;
+ }
+ .background img{
+    width: 168.8rem;
+height: 78.0rem;
+ }
+ .about{
+   display:flex;
+   flex-direction:row;
+   justify-content:center;
+ }
+
+ .about-heading h2{
+position: absolute;
+width: 30.7rem;
+height: 9.1rem;
+left: 30rem;
+top: 25.6rem;
+font-family: 'Bebas Neue';
+font-style: normal;
+font-weight: 400;
+font-size: 10.1rem;
+line-height: 90%;
+color: #FFFFFF;
+background:none;
+
+ }
+ .about-description{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0rem;
+gap: 4.8rem;
+position: absolute;
+width: 70.4rem;
+height: 34.3rem;
+left: 62.8rem;
+top: 25.6rem;
+padding-left:9.0rem;
+background:none;
+ }
+ .main{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0rem;
+gap: 1.6rem;
+width: 70.4rem;
+height: 24.1rem;
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+background:none;
+ }
+ .main h3{
+width: 70.4rem;
+height: 9.0rem;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 3.2rem;
+line-height: 140%;
+color: #FFFFFF;
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+background:none;
+ }
+ .main p{
+width: 71.9rem;
+height: 13.5rem;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 1.8rem;
+line-height: 150%;
+color: #C7C7C7;
+flex: none;
+order: 1;
+flex-grow: 0;
+background:none;
+
+ }
+ .btn{
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+padding: 0rem;
+gap: 1.6rem;
+width: 41.0rem;
+height: 5.4rem;
+flex: none;
+order: 1;
+flex-grow: 0;
+background:none;
+ }
+ .btn a{
+   text-decoration:none;
+ }
+ .btn button{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 2.0rem .6rem 2.0rem 2.4rem;
+gap: 1.2rem;
+
+width: 27.0rem;
+height: 5.4rem;
+background: #D3E97A;
+border-radius: 10.0rem;
+flex: none;
+order: 0;
+flex-grow: 0;
+ color:#000B18;
+ text-decoration:none;
+ border:none;
+ 
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 1.6rem;
+line-height: 100%;
+text-transform: uppercase;
+
+ }
+ .social-media{
+   display:flex;
+   flex-direction:row;
+   background:none;
+   gap:1.0rem;
+ }
+ .social-media button{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0rem;
+gap: 4.0rem;
+width: 5.4rem;
+height: 5.4rem;
+background: #222222;
+border-radius: 10.0rem;
+flex: none;
+order: 1;
+flex-grow: 0;
+ }
+ .fa-brands,
+.fa-linkedin-in{
+    color:#D3E97A; 
+    font-size:2.0rem;   
+}
+.fa-brands ,
+.fa-github{
+  color:#D3E97A; 
+  font-size:2.0rem; 
+}
+ .my-img{
+position: absolute;
+width: 122.4rem;
+height: 70.0rem;
+left: 10.8rem;
+top: 71.9rem;
+padding-left: 10.8rem;
+background:none;
+ }
+ .my-img img{
+   width: 122.4rem;
+height: 70.0rem;
+background:none;
+ }
+ .cap{
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 8.0rem 0rem;
+gap: 2.4rem;
+
+position: absolute;
+width: 122.4rem;
+height: 40.1rem;
+left: 10.8rem;
+top: 145.9rem;
+
+ }
+ .cap-head{
+width: 60.0rem;
+height: 7.6rem;
+font-family: 'Bebas Neue';
+font-style: normal;
+font-weight: 400;
+font-size: 7.6rem;
+line-height: 100%;
+color: #FFFFFF;
+flex: none;
+order: 0;
+flex-grow: 1;
+
+ }
+ .cap-head h2{
+width: 60.0rem;
+height: 7.6rem;
+font-family: 'Bebas Neue';
+font-style: normal;
+font-weight: 400;
+font-size: 7.6rem;
+line-height: 100%;
+color: #FFFFFF;
+flex: none;
+order: 0;
+flex-grow: 1;
+
+ }
+ .cap-body{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0rem;
+gap: 3.2rem;
+width: 60.0rem;
+height: 24.1rem;
+flex: none;
+order: 1;
+flex-grow: 1;
+
+ }
+ .cap-heading{
+width: 60.0rem;
+height: 8.1rem;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 1.8rem;
+line-height: 150%;
+color: #C7C7C7;
+flex: none;
+order: 0;
+flex-grow: 0;
+
+ }
+ .cap-heading p{
+width: 60.0rem;
+height: 8.1rem;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 1.8rem;
+line-height: 150%;
+color: #C7C7C7;
+flex: none;
+order: 0;
+flex-grow: 0;
+
+ }
+ .cap-skill{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: flex-start;
+align-content: flex-start;
+padding: 0rem;
+gap: 1.6rem;
+
+width: 70.4rem;
+height: 12.8rem;
+flex: none;
+order: 1;
+flex-grow: 0;
+ }
+ .skill{
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 2.0rem 4.0rem;
+gap: 1.6rem;
+
+width: 17.5rem;
+height: 5.6rem;
+border: .1rem solid #484848;
+border-radius: 10.0rem;
+
+
+flex: none;
+order: 2;
+flex-grow: 0;
+ }
+ .skill p{
+width: 3.4rem;
+height: 1.6rem;
+
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 1.6rem;
+line-height: 100%;
+
+text-transform: uppercase;
+
+
+color: #FFFFFF;
+
+
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
+ }
+ hr{
+   
+
+position: absolute;
+width: 168.8rem;
+height: 0rem;
+left: 0rem;
+top: 186.0rem;
+
+border: .1rem solid #484848;
+
+ }
+ .professional{
+   
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 8.0rem .0rem;
+gap: 2.4rem;
+
+position: absolute;
+width: 122.4rem;
+height: 58.7rem;
+left: 10.8rem;
+top: 186.1rem;
+
+
+ }
+ .pro-head{
+   
+width: 60.0rem;
+height: 15.2rem;
+font-family: 'Bebas Neue';
+font-style: normal;
+font-weight: 400;
+font-size: 7.6rem;
+line-height: 100%;
+
+color: #FFFFFF;
+
+flex: none;
+order: 0;
+flex-grow: 1;
+
+ }
+ .pro-head h2{
+
+width: 60.0rem;
+height: 15.2rem;
+font-family: 'Bebas Neue';
+font-style: normal;
+font-weight: 400;
+font-size: 7.6rem;
+line-height: 100%;
+color: #FFFFFF;
+flex: none;
+order: 0;
+flex-grow: 1;
+
+ }
+ .pro-body{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0rem;
+gap: 8.0rem;
+
+width: 60.0rem;
+height: 42.7rem;
+flex: none;
+order: 1;
+flex-grow: 1;
+
+ }
+ .body1{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0rem;
+gap: 1.6rem;
+
+width: 60.0rem;
+height: 15.5rem;
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+ }
+ .body-head{
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0rem;
+gap: .8rem;
+
+width: 60.0rem;
+height: 3.1rem;
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+ }
+ .body-head h2{
+
+width: 42.8rem;
+height: 3.1rem;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 2.4rem;
+line-height: 130%;
+letter-spacing: -0.01em;
+color: #FFFFFF;
+flex: none;
+order: 0;
+flex-grow: 1;
+
+ }
+ .body-head p{
+width: 16.4rem;
+height: 2.7rem;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 1.8rem;
+line-height: 150%;
+
+color: #C7C7C7;
+flex: none;
+order: 1;
+flex-grow: 0;
+
+ }
+ .body-body{
+width: 60.0rem;
+height: 10.8rem;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 1.8rem;
+line-height: 150%;
+color: #C7C7C7;
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+ }
+ .body-body p{
+
+
+width: 60.0rem;
+height: 10.8rem;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 1.8rem;
+line-height: 150%;
+color: #C7C7C7;
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+ }
+ .body2{
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0rem;
+gap: 1.6rem;
+
+width: 60.0rem;
+height: 19.2rem;
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+ }
+ #second{
+   position: absolute;
+width: 168.8rem;
+height: 0rem;
+left: 0rem;
+top: 241.2rem;
+border: .1rem solid #484848;
+position: absolute;
+
+
+ }
+ .contact{
+    
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 8.0rem 0rem;
+gap: 2.4rem;
+
+position: absolute;
+width: 122.4rem;
+height: 77.1rem;
+left: 13rem;
+bottom: 1.5rem;
+top:250.6rem;
+
+}
+.contact-details{
+  
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0rem;
+gap: 2.4rem;
+
+width: 60.0rem;
+height: 61.1rem;
+padding-top:4.0rem;
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+}
+.details{
+   
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0rem;
+gap: 4.0rem;
+
+margin: 0 auto;
+width: 60.0rem;
+height: 22.6rem;
+
+
+
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+}
+.connect{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0rem;
+gap: 1.6rem;
+
+width: 60.0rem;
+height: 15.4rem;
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+}
+.connect h2{
+width: 60.0rem;
+height: 7.6rem;
+font-family: 'Bebas Neue';
+font-style: normal;
+font-weight: 400;
+font-size: 7.6rem;
+line-height: 100%;
+color: #FFFFFF;
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.connect p{
+width: 9.5rem;
+height: 2.7rem;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 1.8rem;
+line-height: 150%;
+color: #C7C7C7;
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.connect p a{
+width: 19.6rem;
+height: 2.7rem;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 400;
+font-size: 1.8rem;
+line-height: 150%;
+color: #FFFFFF;
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.connect-icon{
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0rem;
+gap: 2.4rem;
+
+width: 14.4rem;
+height: 3.2rem;
+
+padding-top:3.0rem;
+flex: none;
+order: 1;
+flex-grow: 0;
+background:none;
+
+}
+.connect-icon button{
+
+width: 3.2rem;
+height: 3.2rem;
+border:none;
+flex: none;
+order: 0;
+flex-grow: 0;
+background:none;
+}
+.connect-icon button i{
+    
+font-size: 2.5rem;
+color:#D3E97A;
+}
+.contact-form{
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0rem;
+gap: 4.8rem;
+
+width: 60.0rem;
+height: 61.1rem;
+
+flex: none;
+order: 1;
+flex-grow: 1;
+
+}
+.contact-form label{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0rem;
+gap: .8rem;
+padding-top:4.0rem;
+width: 60.0rem;
+height: 8.5rem;
+font-size:1.8rem;
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+font-family:'Inter';
+font-style: normal;
+font-weight: 500;
+
+
+}
+.contact-form input[type="text"],
+.contact-form textarea{
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 1.2rem 1.6rem;
+gap: 1.0rem;
+border:none;
+width: 60.0rem;
+height: 5.1rem;
+font-family:'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 2.0rem;
+background: #1A1A1A;
+border-radius: .4rem;
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+}
+.contact-form button{
+    border:none;
+    padding-top:4.0rem;
+    background:none;
+}
+.contact-form input[type="submit"]{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 1.0rem 3.0rem;
+gap: 1.6rem;
+text-decoration:none;
+color:#0A0A0A;
+border:none;
+width: 14.0rem;
+height: 5.4rem;
+font-size:1.6rem;
+background: #D3E97A;
+border-radius: 10.0rem;
+flex: none;
+order: 1;
+flex-grow: 0;
+font-family:'Inter';
+font-style: bold;
+font-weight: 500;
+font-size: 2.0rem;
+}
+.info{
+    /* Frame 18 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0rem;
+gap: .8rem;
+
+width: 29.4rem;
+height: 6.2rem;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+.info,
+#mail{
+    /* Frame 17 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0rem;
+gap: .3rem;
+
+width: 29.4rem;
+height: 2.7rem;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.info,
+#mail a{
+   
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0rem;
+
+width: 19.6rem;
+height: 2.7rem;
+border: none;
+
+
+}
+.info p{
+   display: flex;
+flex-direction: row;
+}
+.info p,
+#resume{
+    
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0rem;
+gap: .3rem;
+
+width: 26.0rem;
+height: 2.7rem;
+
+}
+.info a{
+   display:flex;
+   flex-direction:row;
+   text-decoration:underline;
+bottom: -.8rem;
+
+}
+.license footer{
+
+margin: 0 auto;
+width: 22.5rem;
+height: 2.6rem;
+padding-top:2.0rem;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 1.6rem;
+line-height: 160%;
+color: #C7C7C7;
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+@media screen and (min-width:1025px)  and (max-width:1368px){
+  html{
+    font-size: 57%;
+  }
+ 
+  
+}
+@media screen and (min-width:768px) and (max-width:1024px){
+  
+  html{
+    font-size: 55%;
+  }
+ 
+  
+}
+@media screen and (max-width:767px){
+   html{
+    font-size: 55%;
+  } 
+
+  
+  
+}
+   </style>
+</head>
+<body>
+   <!-- Navbar -->
+     <header>
+    <nav class="nav">
+        <h1>Explore My work</h1>
+        <ul class="nav_list">
+             <li class="nav_item"><a class="nav_link" href="#work">Work</a></li>
+             <li class="nav_item"><a class="nav_link" href="#about">About</a></li>
+             <li class="nav_item"><a class="nav_link" href="#contact">Contact</a></li>
+            </ul>
+    </nav>
+   </header>
+   <!-- ends -->
+    <!-- background -->
+   <div class="background">
+    <img src="./img/bg.png" alt="background image">
+   </div>
+   <!-- about -->
+   <div class="about">
+      <div class="about-heading">
+         <section class="section" id="about">
+         <h2>About me</h2>
+         </section>
+      </div>
+      <div class="about-description">
+         <div class="main">
+         <h3>Full-Stack developer based in Kolkata with a background in Computer Applications.</h3>
+         <p>BCA undergraduate student with a passion for technology and a strong foundation in programming languages such as C, Java, C++, Python. Proficient in database management systems, data structures, and web development technologies. Currently, I’m exploring Reactjs, Framer and a bit of Designing. While I am not programming, I enjoy listening to music and photography. Learning more everyday to improve skill</p>
+           </div>
+           <div class="btn">
+           <a href="Sarbani_Bhattacharjee_Resume_2024.pdf" download="Sarbani_Bhattacharjee_Resume_2024.pdf">
+        <button type="button">Download My CV</button>
+    </a>
+                 <div class="social-media">
+                     <button><i class="fa-brands fa-linkedin-in"></i></button>
+                     <button><i class="fa-brands fa-github"></i></button>
+                 </div>
+           </div>
+      </div>
+   </div>
+
+   <!-- ends -->
+    <!-- My image -->
+   <div class="my-img">
+      <img src="./img/sarbani.png" alt="Sarbani">
+   </div>
+
+   <!-- ends -->
+
+
+   <!-- my  -->
+   <div class="cap">
+      <div class="cap-head">
+         <h2>My Capabilities</h2>
+      </div>
+      <div class="cap-body">
+         <div class="cap-heading">
+           <p>I am always looking to add more skills. My goal is to keep evolving as a developer and stay updated with the latest trends in the tech world. I thrive on challenges and continuously seek to learn new technologies.</p>
+         </div>
+         <div class="cap-skill">
+         <div class="skill">
+           <p>HTML</p>
+         </div>
+         <div class="skill">
+           <p>HTML</p>
+         </div>
+         <div class="skill">
+           <p>HTML</p>
+         </div>
+         <div class="skill">
+           <p>HTML</p>
+         </div>
+         <div class="skill">
+           <p>HTML</p>
+         </div>
+         <div class="skill">
+           <p>HTML</p>
+         </div>
+        
+         
+         </div>
+      </div>
+   </div>
+
+<hr>
+ 
+    <div class="professional">
+      <div class="pro-head">
+      <section class="section" id="work">
+         <h2>My Professional Adventures </h2>
+      </section>
+      </div>
+      <div class="pro-body">
+          <div class="body1">
+              <div class="body-head">
+                 <h2>Freelance Developer</h2>
+                 <p>Nov 2023 — Present </p>
+              </div>
+              <div class="body-body">
+              <p>I specialize in creating seamless, high-performance web applications with a focus on both functionality and design. Proficient in technologies like HTML, CSS, JavaScript, I deliver tailored solutions to meet your unique needs. Let's collaborate to bring your vision to life!</p>
+              </div>
+          </div>
+          <div class="body2">
+          <div class="body-head">
+                 <h2>Freelance Developer</h2>
+                 <p>Nov 2023 — Present </p>
+              </div>
+              <div class="body-body">
+              <p>I specialize in creating seamless, high-performance web applications with a focus on both functionality and design. Proficient in technologies like HTML, CSS, JavaScript, I deliver tailored solutions to meet your unique needs. Let's collaborate to bring your vision to life!</p>
+              </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  
+    <hr id="second">
+
+
+
+<!-- CONTACT -->
+
+<div class="contact">
+        <div class="contact-details">
+           <div class="details">
+             <div class="connect">
+             <section class="section" id="contact">
+                <h2>Let’s connect</h2>
+               </section>
+               <div class="info">
+                  <p id="mail">Say hello at <a href="mailto:sarbanibhattacharjee61@gmail.com">sarbanibhattacharjee61@gmail.com</a></p>
+                  <p id="resume">for more info here's my
+                  <a href="Sarbani_Bhattacharjee_Resume_2024.pdf" download="Sarbani_Bhattacharjee_Resume_2024.pdf">resume</a></p>
+                  </div>
+             </div>
+             <div class="connect-icon">
+                <button><i class="fa-brands fa-linkedin-in"></i></button>
+                <button><i class="fa-brands fa-github"></i></button>
+                <button><i class="fa-brands fa-instagram"></i></button>
+             </div>
+           </div>
+           <div class="license">
+            <footer>&copy;2024 Sarbani Bhattacharjee</footer>
+           </div>
+        </div>
+        <div class="contact-form">
+        <form  action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="eab9c434-a420-4a56-aa79-379a4486fad8">
+                <label for="name">Name</label>
+                <input type="text" name="name" required="required">
+                <label for="email">Email</label>
+                <input type="text" name="email" required="required">
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" required="required">
+                <label for="message">Message</label>
+                <textarea required="required" name="message" rows="4"></textarea>
+                <button><input type="submit" name="value"></button>
+            </form>
+        </div>
+       </div>
+
+
+</body>
+   <script src="https://kit.fontawesome.com/39ed2e0629.js" crossorigin="anonymous"></script>
+   <script src="javascript.js"></script>
+</html>
