@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import resume from '../Assets/Sarbani_Bhattacharjee_CV.pdf';
+
 import './Header.css';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,13 +23,14 @@ const Header = () => {
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#techStack">Tech Stack</a></li>
+          {/* <li><a href="#About">About</a></li> */}
           <li><a href="#contact">Contact</a></li>
         </ul>
-    
+           
         <div className="btn">
-          <a href={resume} download="Sarbani_Bhattacharjee_Resume_2026.pdf" className="resume-btn">Resume</a>
+          <a href="/resume.pdf" download="Sarbani_Resume.pdf" className="resume-btn">Resume</a>
         </div>
-
+           
       </div>
     </header>
   );

@@ -1,6 +1,7 @@
-import { useEffect } from "react";
-import { FaArrowRight, FaAws, FaCode, FaJs, FaPencilRuler, FaReact, FaServer } from "react-icons/fa";
-import { SiGraphql, SiNextdotjs, SiPostgresql, SiPython, SiTypescript } from "react-icons/si";
+import emailjs from "emailjs-com";
+import { useEffect, useRef } from "react";
+import { FaArrowRight, FaCode, FaGithub, FaJava, FaJs, FaPencilRuler, FaReact, FaServer } from "react-icons/fa";
+import { SiFigma, SiMysql, SiNodedotjs, SiPython } from "react-icons/si";
 import avi from '../Assets/img1.png';
 import images from '../Assets/me.png';
 import project from '../Assets/Prism Analytics.png';
@@ -10,6 +11,26 @@ import Header from '../Header/Header.jsx';
 import './Body.css';
 
 const Body = () => {
+  const formRef = useRef();
+
+  const sendEmail = (e) => {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_cfjsaop",
+    "template_3upqruq",
+    formRef.current,
+    "UTKH2xUOdmflq4zm8"
+  )
+  .then(() => {
+    alert("Message sent successfully");
+  })
+  .catch((error) => {
+    console.error(error);
+    alert("Failed to send message");
+  });
+};
+
   useEffect(() => {
   const elements = document.querySelectorAll(".reveal");
 
@@ -39,7 +60,7 @@ const Body = () => {
                <div className="container">
                 <div className="home-container reveal">
                      <div className="home1">
-                       <h4>● Full-Stack Developer</h4>
+                       <h4 >● Full-Stack Developer</h4>
                      </div>
                       <div className="hero">
   <h1 className="hero-title">
@@ -99,8 +120,8 @@ const Body = () => {
         <h3>Frontend Engineering</h3>
         <div className="tags">
           <span>React</span>
-          <span>TypeScript</span>
-          <span>Tailwind</span>
+          <span>HTML5</span>
+          <span>CSS3</span>
         </div>
         <div className="progress">
           <div className="bar" style={{width: "94%"}}></div>
@@ -113,11 +134,11 @@ const Body = () => {
         <div className="icon purple">
       <FaServer />
     </div>
-        <h3>Systems Architecture</h3>
+        <h3>Backend Dev</h3>
         <div className="tags">
           <span>Node.js</span>
-          <span>PostgreSQL</span>
-          <span>Docker</span>
+          <span>Flask</span>
+          <span>Mysql</span>
         </div>
         <div className="progress purple">
           <div className="bar" style={{width: "88%"}}></div>
@@ -130,11 +151,11 @@ const Body = () => {
         <div className="icon">
       <FaPencilRuler />
     </div>
-        <h3>UX Synthesis</h3>
+        <h3>Programming</h3>
         <div className="tags">
-          <span>Figma</span>
-          <span>WebGL</span>
-          <span>Framer</span>
+          <span>Java</span>
+          <span>Python</span>
+          <span>JavaScipt</span>
         </div>
         <div className="progress">
           <div className="bar" style={{width: "82%"}}></div>
@@ -162,13 +183,17 @@ const Body = () => {
         <div className="overlay"></div>
 
         <div className="card-content">
-          <span className="tag">AI INFRASTRUCTURE</span>
-          <h3>Neural_Net_V2</h3>
+          <span className="tag">WEB APPLICATION</span>
+          <h3>TrendMart</h3>
           <p>
-            Real-time data visualization platform for deep learning model
-            analysis and deployment monitoring.
+             Intelligent sales prediction system leveraging Machine Learning to 
+    forecast future demand from historical data, combined with a dynamic 
+    React.js dashboard for real-time visualization and insights.
           </p>
-          <FaArrowRight className="arrow" />
+          <FaArrowRight 
+  className="arrow" 
+  onClick={() => window.open( "https://github.com/Bani2024/Curator" , "_blank")} 
+/>
         </div>
       </div>
 
@@ -179,13 +204,15 @@ const Body = () => {
         <div className="overlay"></div>
 
         <div className="card-content right">
-          <span className="tag purple">CYBERSECURITY</span>
-          <h3>Void_Protocol</h3>
+          <span className="tag purple">AI HEALTHCARE</span>
+          <h3>AVI.AI</h3>
           <p>
-            An encrypted communications layer built on decentralized mesh
-            networks for zero-trust environments.
+            AI-based system assisting visually impaired users by detecting allergens and predicting food safety.
           </p>
-          <FaArrowRight className="arrow" />
+          <FaArrowRight 
+  className="arrow" 
+  onClick={() => window.open("https://github.com/Bani2024/avi.ai", "_blank")} 
+/>
         </div>
       </div>
 
@@ -197,11 +224,14 @@ const Body = () => {
 
         <div className="card-content bottom">
           <span className="tag blue">FINTECH MODULE</span>
-          <h3>Prism_Analytics</h3>
+          <h3>SkillMore</h3>
           <p>
-            High-frequency trading dashboard with sub-millisecond data refresh
-            cycles.
+            Interactive course booking platform with real-time availability, user-friendly navigation, and efficient enrollment management.
           </p>
+          <FaArrowRight 
+  className="arrow" 
+  onClick={() => window.open("https://github.com/Bani2024/Course-Booking-Website", "_blank")} 
+/>
         </div>
       </div>
 
@@ -230,13 +260,13 @@ const Body = () => {
       </div>
 
       <div className="core-item">
-        <SiTypescript />
-        <p>TYPESCRIPT</p>
+        <FaJava />
+        <p>JAVA</p>
       </div>
 
       <div className="core-item">
-        <SiPostgresql />
-        <p>POSTGRESQL</p>
+        <SiMysql />
+        <p>MYSQL</p>
       </div>
 
       <div className="core-item">
@@ -245,18 +275,18 @@ const Body = () => {
       </div>
 
       <div className="core-item">
-        <SiNextdotjs />
-        <p>NEXT.JS</p>
+        <SiNodedotjs />
+        <p>NODE.JS</p>
       </div>
 
       <div className="core-item">
-        <SiGraphql />
-        <p>GRAPHQL</p>
+        <SiFigma />
+        <p>Figma</p>
       </div>
 
       <div className="core-item">
-        <FaAws />
-        <p>AWS</p>
+        <FaGithub />
+        <p>GITHUB</p>
       </div>
 
     </div>
@@ -284,7 +314,7 @@ const Body = () => {
 
         <div className="info-item">
           <span>◎</span>
-          <p>Distributed Node: Berlin_DE</p>
+          <p>+91-83920-85817</p>
         </div>
       </div>
     </div>
@@ -293,11 +323,11 @@ const Body = () => {
     <div className="connection-right">
       <h3>Initialize Connection</h3>
 
-      <form className="connection-form">
+      <form ref={formRef} onSubmit={sendEmail} className="connection-form">
 
         <div className="input-group">
           <label>PROTOCOL NAME</label>
-          <input type="text" placeholder="ID: USER_IDENTIFIER" />
+          <input type="text" name="user_name" placeholder="ID: USER_IDENTIFIER" />
         </div>
 
         <div className="input-group">
@@ -307,10 +337,10 @@ const Body = () => {
 
         <div className="input-group">
           <label>REQUEST DATA</label>
-          <textarea placeholder="DESCRIBE YOUR VISION..."></textarea>
+          <textarea name="message" placeholder="DESCRIBE YOUR VISION..."></textarea>
         </div>
 
-        <button className="send-btn">
+        <button type="submit" className="send-btn">
           SEND TRANSMISSION →
         </button>
 
